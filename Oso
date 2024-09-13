@@ -1,0 +1,8 @@
+void main() {
+  background(64,183,130);
+  ellipse(90,85,90,90);
+  ellipse(230,85,90,90);
+  ellipse(160,160,180,180);
+  ellipse (125,120,50,50);
+  ellipse (195,120,50,50);
+}
