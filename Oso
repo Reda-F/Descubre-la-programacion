@@ -1,8 +1,29 @@
-void main() {
-  background(64,183,130);
-  ellipse(90,85,90,90);
+background(64,183,130);
+void orejas(){
+   ellipse(90,85,90,90);
   ellipse(230,85,90,90);
-  ellipse(160,160,180,180);
-  ellipse (125,120,50,50);
-  ellipse (195,120,50,50);
+}
+void cabeza(){
+   ellipse(160,160,180,180);
+}
+void ojos(){
+  ellipse(125,120,40,40);
+  ellipse(195,120,40,40);
+}
+void nariz_y_pupilas(){
+  ellipse(160,160,65,25);
+  fill(0,0,0);
+  ellipse(125,120,10,10);
+  ellipse(195,120,10,10);
+}
+void boca(){
+  ellipse(160,210,30,10);
+}
+
+void main() {
+	orejas();
+  cabeza();
+  ojos();
+  nariz_y_pupilas();
+  boca();
 }
