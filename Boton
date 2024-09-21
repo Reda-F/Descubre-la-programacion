@@ -18,14 +18,12 @@ void mecanicas_boton(){
   double y = mouseY;
   if (mousePressed)
     if (mouseButton == LEFTBUTTON){
-        if (x>130 && y>130){
-          if (x<190 && y<190){
-            otra();
-          } else{
-            boton();
-          }
-        }
+        if (x>130 && y>130 && x<190 && y<190){
+          otra();
+        }else{
+          boton();
       }
+    }
   }
 
 void main(){
