@@ -8,20 +8,26 @@ void boton(){
   text("Pulsa aquí",132,155);
 }
 
-void mecanicas_boton(){
-  int x = mouseX;
-  int y = mouseY;
-  if (mousePressed){
-    if (LEFTBUTTON = true && 130<x<190){
-      if (LEFTBUTTON == TRUE && 130<y<190){
-        button()=false;
-      }
-        
-    }
-    
-  }
+void otra(){
+  background(213,53,53);
+  text("Ya pulsaste",130,130);
 }
 
+void mecanicas_boton(){
+  double x = mouseX;
+  double y = mouseY;
+  if (mousePressed)
+    if (mouseButton == LEFTBUTTON){
+        if (x>130 && y>130){
+          if (x<190 && y<190){
+            otra();
+          } else{
+            boton();
+          }
+        }
+      }
+  }
+
 void main(){
-  boton();
+  animate(mecanicas_boton);
 }
