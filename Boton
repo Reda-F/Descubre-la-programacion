@@ -1,9 +1,26 @@
 void boton(){
-  fill(63,221,187,0.72);
-  rect(115,115,90,90);
-  text("Pincha aquí",160,160);
+  background(93,177,179);
+  fill(211,30,30);
+  rect(130,130,60,60);
+  noFill();
+  fill(0,0,0);
+  textSize(9);
+  text("Pulsa aquí",132,155);
 }
-  
+
+void mecanicas_boton(){
+  int x = mouseX;
+  int y = mouseY;
+  if (mousePressed){
+    if (LEFTBUTTON = true && 130<x<190){
+      if (LEFTBUTTON == TRUE && 130<y<190){
+        button()=false;
+      }
+        
+    }
+    
+  }
+}
 
 void main(){
   boton();
