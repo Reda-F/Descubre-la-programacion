@@ -26,6 +26,11 @@ void mecanicas_boton(){
     }
   }
 
+void ejecutar(){
+  boton();
+  mecanicas_boton();
+}
+
 void main(){
-  animate(mecanicas_boton);
+  animate(ejecutar);
 }
