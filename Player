@@ -1,0 +1,20 @@
+int x=160;
+int y=160;
+
+void mec_p(){
+  if (keyPressed && key=="w"){
+    y=150+y;
+    background(25,195,159);
+  }
+}
+void player(){
+  image("https://i.pinimg.com/originals/b5/d8/02/b5d80238f669c42d4159d841f44d5057.jpg",x,y,50,50);
+}
+
+void anim(){
+  mec_p();
+  player();
+}
+
+void main(){
+  animate(anim);}
