@@ -1,3 +1,5 @@
+boolean acti=true;
+
 void boton(){
   background(93,177,179);
   fill(211,30,30);
@@ -16,15 +18,23 @@ void otra(){
 void mecanicas_boton(){
   double x = mouseX;
   double y = mouseY;
-  if (mousePressed)
-    if (mouseButton == LEFTBUTTON){
+  if (mousePressed && acti==true){
+  if (mouseButton == LEFTBUTTON){
         if (x>130 && y>130 && x<190 && y<190){
-          otra();
-        }else{
+          acti=false;
+        }
+  }}
+    if (acti==false){
+      otra();
+    }
+  
+    if (!mousePressed){
+      if (acti==false){
           boton();
+        acti=true;}
       }
     }
-  }
+  
 
 void ejecutar(){
   boton();
