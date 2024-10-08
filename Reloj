@@ -1,10 +1,27 @@
-boolean a=false;
-int r=round(random(255));
-int g=round(random(255));
-int b=round(random(255));
+boolean a = false;
+int t = 0;
+int r = 0;
+int g = 0;
+int b = 0;
 
-void reloj(){
-	int t=second();
-  if (t%5=0){a=true;}
-  if(a==true){background(r,g,b);}
+void draw() {
+  t++;
+  reloj();
+}
+
+void reloj() {
+  if (t % 120 == 0) {
+    a = true; 
+  }
+  if (a == true) {
+    r = round(random(255));
+    g = round(random(255));
+    b = round(random(255));
+    background(r, g, b);
+    a = false;
+  }
+}
+
+void main(){
+  animate(draw);
 }
