@@ -1,0 +1,19 @@
+void menu_pr(){
+  background(0,0,0);
+  rect(110,120,100,35);
+  rect(110,160,100,35);
+  rect(110,200,100,35);
+}
+void menu_jg(){ 	
+  image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Rve6lSlff66pm4w1v3G0dBwUhSrSsWP6WA&s",0,0,320,320);
+}
+void menu_cr(){
+  background(161,40,207);
+  textSize(15);
+  text("Hecho por Reda",50,150);
+}
+void mec(){
+  
+}
+  void main(){
+}
