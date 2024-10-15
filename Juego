@@ -1,3 +1,5 @@
+int x=mouseX;
+int y=mouseY;
 void menu_pr(){
   background(0,0,0);
   rect(110,120,100,35);
@@ -13,7 +15,7 @@ void menu_cr(){
   text("Hecho por Reda",50,150);
 }
 void mec(){
-  
+  if(mousePressed==LEFTBUTTON && x>110 && x<210 )
 }
   void main(){
 }
