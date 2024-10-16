@@ -1,12 +1,11 @@
-int x=mouseX;
-int y=mouseY;
+boolean a1=true;
 void menu_pr(){
   background(0,0,0);
   rect(110,120,100,35);
   rect(110,160,100,35);
   rect(110,200,100,35);
 }
-void menu_jg(){ 	
+void menu_jg(){background(255,255,255);
   image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Rve6lSlff66pm4w1v3G0dBwUhSrSsWP6WA&s",0,0,320,320);
 }
 void menu_cr(){
@@ -15,7 +14,20 @@ void menu_cr(){
   text("Hecho por Reda",50,150);
 }
 void mec(){
-  if(mousePressed==LEFTBUTTON && x>110 && x<210 )
+  menu_pr();
+  double x=mouseX;
+	double y=mouseY;
+  if (mousePressed && a1==true){
+  if(mouseButton==LEFTBUTTON)
+  {if (x>110 && x<210 && y<155 && y>120) 
+  {menu_jg();a1=false;}}}
+  if(mouseButton==LEFTBUTTON)
+  {if(x>70 && x<100 && y<55 && y>60)
+  {a1=true;menu_pr();} }
 }
-  void main(){
+
+void anim(){mec();}
+void main(){
+  animate(anim); 
+ 
 }
