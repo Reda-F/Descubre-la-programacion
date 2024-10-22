@@ -1,33 +1,33 @@
 boolean a1=true;
+boolean a2=true;
+boolean a3=true;
+boolean a4=true;
+boolean a5=true;
 void menu_pr(){
   background(0,0,0);
   rect(110,120,100,35);
   rect(110,160,100,35);
   rect(110,200,100,35);
 }
-void menu_jg(){background(255,255,255);
+void menu_jg(){
   image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Rve6lSlff66pm4w1v3G0dBwUhSrSsWP6WA&s",0,0,320,320);
 }
 void menu_cr(){
   background(161,40,207);
-  textSize(15);
+  textSize(11);
   text("Hecho por Reda",50,150);
 }
+void ins(){background(237,6,6);textSize(25);text("Te las arreglas",10,10);}
 void mec(){
-  menu_pr();
+  if (a1==true){menu_pr();}
   double x=mouseX;
 	double y=mouseY;
-  if (mousePressed && a1==true){
-  if(mouseButton==LEFTBUTTON)
-  {if (x>110 && x<210 && y<155 && y>120) 
-  {menu_jg();a1=false;}}}
-  if(mouseButton==LEFTBUTTON)
-  {if(x>70 && x<100 && y<55 && y>60)
-  {a1=true;menu_pr();} }
+  if (mouseButton==LEFTBUTTON){if(x<210 && x>110 && y<155 && y>120){if(a2==true){a1=false;a4=false;a3=false;menu_jg();}}}
+  if (mouseButton==LEFTBUTTON){if(x<210 && x>110 && y<195 && y>160){if(a3==true){a1=false;a2=false;a4=false;menu_cr();}}}
+  if (mouseButton==LEFTBUTTON){if(x<210 && x>110 && y<235 && y>200){if(a4==true){a1=false;a2=false;a3=false;ins();}}}
 }
 
 void anim(){mec();}
 void main(){
   animate(anim); 
- 
 }
