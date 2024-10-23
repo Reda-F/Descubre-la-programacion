@@ -26,7 +26,7 @@ void mec(){
   menu_pr();
   double x=mouseX;
 	double y=mouseY;
-  if (mouseButton==LEFTBUTTON){    
+  if (mousePressed && mouseButton==LEFTBUTTON){    
     if(x<210 && x>110 && y<155 && y>120 && a3==true && a4==true){
       if(a2==true){
         a2=false;
@@ -38,10 +38,10 @@ void mec(){
     if(x<210 && x>110 && y<235 && y>200 && a2==true && a4==true){
       if(a4==true){
         a4=false;
-	}}
-  	if(a2==false || a3==false || a4==false){
-      a5=false;
-    }}
+      }}}
+  if(a2==false || a3==false || a4==false){
+     a5=false;
+    }
   if (a2==false){
     menu_jg();
     image("https://e7.pngegg.com/pngimages/1022/856/png-clipart-button-back-s-blue-text-thumbnail.png",20,20,40,40);
@@ -54,7 +54,7 @@ void mec(){
     ins();
     image("https://e7.pngegg.com/pngimages/1022/856/png-clipart-button-back-s-blue-text-thumbnail.png",20,20,40,40);
   }
-  if (a5==false && mouseButton==LEFTBUTTON && x<60 && x>20 && y<60 && y>20){
+  if (mousePressed && a5==false && mouseButton==LEFTBUTTON && x<60 && x>20 && y<60 && y>20){
     if (a2==false || a3==false || a4==false){
       a1=true;
       a2=true;
