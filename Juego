@@ -3,6 +3,9 @@ boolean a2=true;
 boolean a3=true;
 boolean a4=true;
 boolean a5=true;
+boolean a6=false;
+boolean a7=false;
+boolean a8=false;
 void menu_pr(){
   background(0,0,0);
   rect(110,120,100,35);
@@ -18,16 +21,70 @@ void menu_cr(){
   text("Hecho por Reda",50,150);
 }
 void ins(){background(237,6,6);textSize(25);text("Te las arreglas",10,10);}
+void paty(){
+  if (a1==true){
+    menu_pr();
+    a6=false;
+    a7=false;
+    a8=false;
+    
+  }}
+void caca(){
+  if(a6==true){
+    image("https://e7.pngegg.com/pngimages/1022/856/png-clipart-button-back-s-blue-text-thumbnail.png",20,20,40,40);
+  }}
+void caca2(){
+  if(a7==true){
+    image("https://e7.pngegg.com/pngimages/1022/856/png-clipart-button-back-s-blue-text-thumbnail.png",20,20,40,40);
+  }}
+void caca3(){
+  if(a8==true){
+    image("https://e7.pngegg.com/pngimages/1022/856/png-clipart-button-back-s-blue-text-thumbnail.png",20,20,40,40);
+  }}
 void mec(){
-  if (a1==true){menu_pr();}
+  paty();
+  caca();
+  caca2();
+  caca3();
   double x=mouseX;
 	double y=mouseY;
-  if (mouseButton==LEFTBUTTON){if(x<210 && x>110 && y<155 && y>120){if(a2==true){a1=false;a4=false;a3=false;menu_jg();}}}
-  if (mouseButton==LEFTBUTTON){if(x<210 && x>110 && y<195 && y>160){if(a3==true){a1=false;a2=false;a4=false;menu_cr();}}}
-  if (mouseButton==LEFTBUTTON){if(x<210 && x>110 && y<235 && y>200){if(a4==true){a1=false;a2=false;a3=false;ins();}}}
+  if (mouseButton==LEFTBUTTON){    
+    if(x<210 && x>110 && y<155 && y>120){
+      if(a2==true){
+        a1=false;
+        a4=false;
+        a3=false;
+        a6=true;
+        menu_jg();
+      }}
+  	if(x<210 && x>110 && y<195 && y>160){
+      if(a3==true){
+        a1=false;
+        a2=false;
+        a4=false;
+        menu_cr();
+      }}
+    if(x<210 && x>110 && y<235 && y>200){
+      if(a4==true){
+        a1=false;
+        a2=false;
+        a3=false;
+        ins();
+    	}}
+    if(a6==true && x<60 && y<60 && x>20 && y>20){
+      a1=true;
+    }
+    if(a7==true && x<60 && y<60 && x>20 && y>20){
+      a1=true;
+    }
+    if(a8==true && x<60 && y<60 && x>20 && y>20){
+      a1=true;
+    } 
+  }                            
 }
+
 
 void anim(){mec();}
 void main(){
-  animate(anim); 
+  animate(anim);
 }
