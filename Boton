@@ -1,46 +1,72 @@
-boolean acti=true;
-
-void boton(){
-  background(93,177,179);
-  fill(211,30,30);
-  rect(130,130,60,60);
-  noFill();
-  fill(0,0,0);
-  textSize(9);
-  text("Pulsa aquí",132,155);
+boolean a1=false;
+boolean a2=true;
+boolean a3=true;
+boolean a4=true;
+boolean a5=true;
+boolean a6=true;
+boolean a7=true;
+boolean a8=true;
+void menu_pr(){
+  background(0,0,0);
+  rect(110,120,100,35);
+  rect(110,160,100,35);
+  rect(110,200,100,35);
 }
-
-void otra(){
-  background(213,53,53);
-  text("Ya pulsaste",130,130);
+void menu_jg(){
+  image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Rve6lSlff66pm4w1v3G0dBwUhSrSsWP6WA&s",0,0,320,320);
 }
+void menu_cr(){
+  background(161,40,207);
+  textSize(11);
+  text("Hecho por Reda",50,150);
+}
+void ins(){background(237,6,6);textSize(25);text("Te las arreglas",10,10);}
 
-void mecanicas_boton(){
-  double x = mouseX;
-  double y = mouseY;
-  if (mousePressed && acti==true){
-  if (mouseButton == LEFTBUTTON){
-        if (x>130 && y>130 && x<190 && y<190){
-          acti=false;
-        }
-  }}
-    if (acti==false){
-      otra();
+void mec(){
+  menu_pr();
+  double x=mouseX;
+	double y=mouseY;
+  if (mouseButton==LEFTBUTTON){    
+    if(x<210 && x>110 && y<155 && y>120 && a3==true && a4==true){
+      if(a2==true){
+        a2=false;
+      }}
+    if(x<210 && x>110 && y<195 && y>160 && a2==true && a4==true){
+      if(a3==true){
+        a3=false;
+        }}
+    if(x<210 && x>110 && y<235 && y>200 && a2==true && a4==true){
+      if(a4==true){
+        a4=false;
+	}}
+  	if(a2==false || a3==false || a4==false){
+      a5=false;
+    }}
+  if (a2==false){
+    menu_jg();
+    image("https://e7.pngegg.com/pngimages/1022/856/png-clipart-button-back-s-blue-text-thumbnail.png",20,20,40,40);
+  }
+  if (a3==false){
+    menu_cr();
+    image("https://e7.pngegg.com/pngimages/1022/856/png-clipart-button-back-s-blue-text-thumbnail.png",20,20,40,40);
+  }
+  if (a4==false){
+    ins();
+    image("https://e7.pngegg.com/pngimages/1022/856/png-clipart-button-back-s-blue-text-thumbnail.png",20,20,40,40);
+  }
+  if (a5==false && mouseButton==LEFTBUTTON && x<60 && x>20 && y<60 && y>20){
+    if (a2==false || a3==false || a4==false){
+      a1=true;
+      a2=true;
+      a3=true;
+      a4=true;
+      a5=true;
     }
-  
-    if (!mousePressed){
-      if (acti==false){
-          boton();
-        acti=true;}
-      }
-    }
-  
-
-void ejecutar(){
-  boton();
-  mecanicas_boton();
+  }
 }
 
+
+void anim(){mec();}
 void main(){
-  animate(ejecutar);
+  animate(anim);
 }
