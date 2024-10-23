@@ -6,21 +6,24 @@ boolean a5=true;
 boolean a6=true;
 boolean a7=true;
 boolean a8=true;
+
 void menu_pr(){
-  background(0,0,0);
-  rect(110,120,100,35);
-  rect(110,160,100,35);
-  rect(110,200,100,35);
+  image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO3Ndz2pa0c3aI2PF2blphbEaMeAAgmLzXGw&s",0,0,320,320);
+  image("https://i.pinimg.com/originals/b4/2f/bb/b42fbb67b95e9f65e1cbcedeb628aa68.png",110,120,100,35);
+  image("https://i.pinimg.com/originals/b4/2f/bb/b42fbb67b95e9f65e1cbcedeb628aa68.png",110,160,100,35);
 }
+
 void menu_jg(){
   image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Rve6lSlff66pm4w1v3G0dBwUhSrSsWP6WA&s",0,0,320,320);
 }
+
 void menu_cr(){
   background(161,40,207);
   textSize(11);
   text("Hecho por Reda",50,150);
 }
-void ins(){background(237,6,6);textSize(25);text("Te las arreglas",10,10);}
+
+void ins(){background(237,6,6);textSize(20);text("Se juega con WASD",50,140);}
 
 void mec(){
   menu_pr();
@@ -65,8 +68,8 @@ void mec(){
   }
 }
 
-
 void anim(){mec();}
+
 void main(){
   animate(anim);
 }
