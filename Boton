@@ -10,7 +10,8 @@ boolean a8=true;
 void menu_pr(){
   image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO3Ndz2pa0c3aI2PF2blphbEaMeAAgmLzXGw&s",0,0,320,320);
   image("https://i.pinimg.com/originals/b4/2f/bb/b42fbb67b95e9f65e1cbcedeb628aa68.png",110,120,100,35);
-  image("https://i.pinimg.com/originals/b4/2f/bb/b42fbb67b95e9f65e1cbcedeb628aa68.png",110,160,100,35);
+  image("https://scontent.xx.fbcdn.net/v/t1.15752-9/462556058_1057455659261462_7102521295166086444_n.png?_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=tAj0OIkou_EQ7kNvgFHx1qf&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&_nc_gid=AAbFzMpFV5RWovTDzhOr73r&oh=03_Q7cD1QFi51FRo5z_FSgcND49KensVgRkX0EiCjHfdOHxzcmaBg&oe=6741DC17",110,160,100,35);
+  image("https://e1.pngegg.com/pngimages/624/1003/png-clipart-silver-button-credit-button-thumbnail.png",110,200,100,35);
 }
 
 void menu_jg(){
@@ -35,12 +36,12 @@ void mec(){
         a2=false;
       }}
     if(x<210 && x>110 && y<195 && y>160 && a2==true && a4==true){
-      if(a3==true){
-        a3=false;
-        }}
-    if(x<210 && x>110 && y<235 && y>200 && a2==true && a4==true){
       if(a4==true){
         a4=false;
+        }}
+    if(x<210 && x>110 && y<235 && y>200 && a2==true && a4==true){
+      if(a3==true){
+        a3=false;
       }}}
   if(a2==false || a3==false || a4==false){
      a5=false;
