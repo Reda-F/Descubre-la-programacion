@@ -6,7 +6,7 @@ boolean a5=true;
 boolean a6=true;
 boolean a7=true;
 boolean a8=true;
-
+String Nombre=readString("Escribe tu nombre");
 
 void menu_pr(){
   image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO3Ndz2pa0c3aI2PF2blphbEaMeAAgmLzXGw&s",0,0,320,320);
@@ -49,12 +49,14 @@ void menu_jg(){
 }
 
 void menu_cr(){
-  background(161,40,207);
+ 	image("https://upload.wikimedia.org/wikipedia/commons/f/fd/Green_Hill_Zone_%28Sonic_the_Hedgehog%29.png",0,0,320,320);
+  fill(0,0,0);
   textSize(11);
   text("Hecho por Reda",50,150);
+  noFill();
 }
 
-void ins(){background(237,6,6);textSize(20);text("Se juega con WASD",50,140);}
+void ins(){image("https://i.pinimg.com/736x/ad/27/83/ad2783c48066408ae58f73b66afccb0b.jpg",0,0,320,320);fill(0,0,0);textSize(20);text("Se juega con WASD",50,140);noFill();}
 
 void mec(){
   menu_pr();
@@ -100,7 +102,19 @@ void mec(){
 }
 
 void anim(){mec();}
-
+void anim2(){
+  fill(0,0,0);
+  rect(110,240,100,35);
+  noFill();
+  fill(255,255,255);
+  textSize(15);
+  text(Nombre,120,265);
+  noFill();
+}
+void mecachisenlamar(){
+  anim();
+  anim2();
+}
 void main(){
-  animate(anim);
+  animate(mecachisenlamar);
 }
