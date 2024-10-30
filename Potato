@@ -1,0 +1,37 @@
+boolean tiempo=false;
+  int velI=5;
+  int g=7;
+  int x=160;
+  int y=280;
+boolean g1=true;
+int t=0;
+void t1(){
+  if (tiempo==true){
+    t++;
+  	}
+  if (tiempo==false){
+    t=0;
+  }
+}
+void pto(){
+  background(64,255,0);
+  if(y<315 && g1==true){y=y+g;}
+  if (tiempo==false && keyPressed && key=="up"){
+    y=y-velI;
+    tiempo=true;
+    g1=false;
+  }
+  if (!keyPressed){
+    tiempo=false;
+    g1=true;
+  }
+  rect(x-5,y-5,10,10);
+}
+void a(){
+  t1();
+  pto();
+  println(tiempo);
+}
+void main(){
+  animate(a);
+}
