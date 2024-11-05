@@ -1,8 +1,8 @@
 boolean tiempo=false;
-  int velI=5;
-  int g=7;
-  int x=160;
-  int y=280;
+int velI=5;
+int g=7;
+int x=160;
+int y=280;
 boolean g1=true;
 int t=0;
 void t1(){
@@ -15,14 +15,24 @@ void t1(){
 }
 void pto(){
   background(64,255,0);
-  if(y<315 && g1==true){y=y+g;}
-  if (tiempo==false && keyPressed && key=="up"){
-    y=y-velI;
-    tiempo=true;
+  if(y<315 && g1==true && tiempo==false){
+    y=y+g;
+  }
+  if (keyPressed && key=="up"){
     g1=false;
+    y=y-velI;
+    tiempo=true;    
   }
   if (!keyPressed){
     tiempo=false;
+    g1=true;
+  }
+  if(keyPressed && key=="left"){
+    x=x-2;
+    g1=true;
+  }
+  if(keyPressed && key=="right"){
+    x=x+2;
     g1=true;
   }
   rect(x-5,y-5,10,10);
