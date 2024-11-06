@@ -2,7 +2,9 @@ boolean tiempo=false;
 int velI=5;
 int g=7;
 int x=160;
-int y=280;
+int y=50;
+int tt=0;
+boolean saltar=false;
 boolean g1=true;
 int t=0;
 void t1(){
@@ -14,33 +16,36 @@ void t1(){
   }
 }
 void pto(){
+  rect()
   background(64,255,0);
-  if(y<315 && g1==true && tiempo==false){
+  if(tt>50 && y<300 && g1==true){
     y=y+g;
   }
   if (keyPressed && key=="up"){
-    g1=false;
-    y=y-velI;
-    tiempo=true;    
+    saltar=true;
   }
-  if (!keyPressed){
+  if(saltar==true){
+    tiempo=true;  
+    g1=false;
+    y=50;
+  }
+  if (t/50==1){
     tiempo=false;
     g1=true;
+    saltar=false;
   }
   if(keyPressed && key=="left"){
     x=x-2;
-    g1=true;
   }
   if(keyPressed && key=="right"){
     x=x+2;
-    g1=true;
   }
   rect(x-5,y-5,10,10);
 }
 void a(){
+  tt++;
   t1();
   pto();
-  println(tiempo);
 }
 void main(){
   animate(a);
