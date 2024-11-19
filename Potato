@@ -1,12 +1,16 @@
 boolean tiempo=false;
 int velI=5;
-int g=7;
+double g=1.7;
 int x=160;
-int y=50;
+double y=50;
 int tt=0;
 boolean saltar=false;
 boolean g1=true;
+boolean game=false;
 int t=0;
+boolean zona_1=false;
+boolean zona_2=false;
+boolean zona_3=false;
 void t1(){
   if (tiempo==true){
     t++;
@@ -16,8 +20,8 @@ void t1(){
   }
 }
 void pto(){
-  rect()
   background(64,255,0);
+  image("https://github.com/Reda-F/Descubre-la-programacion/blob/main/img/dibujo%20(1).png?raw=true",0,0,320,320);
   if(tt>50 && y<300 && g1==true){
     y=y+g;
   }
@@ -35,17 +39,30 @@ void pto(){
     saltar=false;
   }
   if(keyPressed && key=="left"){
-    x=x-2;
+    x=x-7;
   }
   if(keyPressed && key=="right"){
-    x=x+2;
+    x=x+7;
   }
-  rect(x-5,y-5,10,10);
+  rect(x-5,y-5,3,3);
+}
+void game_over(){
+  if(x<30 || y>290 || x>290){
+    game=true;
+  }
 }
 void a(){
+  game_over();
   tt++;
   t1();
-  pto();
+  println(x);
+  println(game);
+  if(game==false){
+    pto();
+  }
+  if(game==true){
+    background(0,0,0);
+  }
 }
 void main(){
   animate(a);
