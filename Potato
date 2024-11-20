@@ -47,7 +47,7 @@ void pto(){
   rect(x-5,y-5,3,3);
 }
 void game_over(){
-  if(x<30 || y>290 || x>290){
+  if(y>290 || (x>90 && x<120 && y>60) || x>290 || x<30 || (x<60 && y>120 && y<130) || (x>70 && x<90 && y)){
     game=true;
   }
 }
@@ -55,8 +55,6 @@ void a(){
   game_over();
   tt++;
   t1();
-  println(x);
-  println(game);
   if(game==false){
     pto();
   }
