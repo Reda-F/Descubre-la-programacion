@@ -11,12 +11,29 @@ int t=0;
 boolean zona_1=false;
 boolean zona_2=false;
 boolean zona_3=false;
+boolean vic=false;
+int score=0;
 void t1(){
   if (tiempo==true){
     t++;
   	}
   if (tiempo==false){
     t=0;
+  }
+} 
+void win(){
+  if ((x>30 && x<90 && y>250) || (x>120 && x<200 && y>250) || (x>230 && y>250)){
+    score=score+1;
+    game=true;
+  }
+
+  if (score==3){
+    vic=true;
+  }
+  if (vic==true){
+    image("https://ibericadepatatas.es/wp-content/uploads/2019/11/img-producto-patatas-voyager-iberica-de-patatas.jpg",0,0,320,320);
+    textSize(13);
+    text("¡Has ganado!",120,120);
   }
 }
 void pto(){
