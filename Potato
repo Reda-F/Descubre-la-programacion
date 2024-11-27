@@ -13,6 +13,8 @@ boolean zona_2=false;
 boolean zona_3=false;
 boolean vic=false;
 int score=0;
+boolean zone1=false;
+boolean zone2=false;
 void t1(){
   if (tiempo==true){
     t++;
@@ -22,11 +24,17 @@ void t1(){
   }
 } 
 void win(){
-  if ((x>30 && x<90 && y>250) || (x>120 && x<200 && y>250) || (x>230 && y>250)){
-    score=score+1;
+  if ((x>30 && x<90 && y>250)){
+    score=1;
+    zone1=true;
+  }
+	if ((x>120 && x<200 && y>250)){
+    score=2;
+    zone2=true;
+  }if ((x>230 && y>250) && (zone1 && zone2)==true){
+    score=3;
     game=true;
   }
-
   if (score==3){
     vic=true;
   }
@@ -39,7 +47,7 @@ void win(){
 void pto(){
   background(64,255,0);
   image("https://github.com/Reda-F/Descubre-la-programacion/blob/main/img/dibujo%20(1).png?raw=true",0,0,320,320);
-  if(tt>50 && y<300 && g1==true){
+  if(tt>50 && y<285 && g1==true){
     y=y+g;
   }
   if (keyPressed && key=="up"){
@@ -69,6 +77,7 @@ void game_over(){
   }
 }
 void a(){
+  win();
   game_over();
   tt++;
   t1();
@@ -78,6 +87,8 @@ void a(){
   if(game==true){
     background(0,0,0);
   }
+  textSize(8);
+  text(score,10,10);
 }
 void main(){
   animate(a);
