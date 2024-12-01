@@ -83,7 +83,6 @@ void mec(){
      a5=false;
     }
   if (a2==false){
-    menu_jg();
     juego_activo=true;
     nombre=true;
   }
@@ -159,7 +158,10 @@ void win(){
   if (vic==true){
     image("https://ibericadepatatas.es/wp-content/uploads/2019/11/img-producto-patatas-voyager-iberica-de-patatas.jpg",0,0,320,320);
     textSize(13);
+    fill(0,0,0);
     text("¡Has ganado!",120,120);
+    image("https://e7.pngegg.com/pngimages/1022/856/png-clipart-button-back-s-blue-text-thumbnail.png",20,20,40,40);
+    noFill();
   }
 }
 void pto(){
@@ -201,12 +203,15 @@ void a(){
   t1();
   if(game==false && vic==false){
     pto();
+    fill(255,255,255);
+    textSize(8);
+    text(score,10,10);
+    noFill();
   }
   if(game==true){
     background(0,0,0);
+    image("https://e7.pngegg.com/pngimages/1022/856/png-clipart-button-back-s-blue-text-thumbnail.png",20,20,40,40);
   }
-  textSize(8);
-  text(score,10,10);
 }
 void anim(){mec();}
 void anim2(){
@@ -223,9 +228,21 @@ void anim2(){
 void mecachisenlamar(){
   anim();
   anim2();
+  if (a2==true){
+  	x=160;
+    y=50;
+    score=0;
+    tt=0;
+  }
   if(juego_activo==true){
   	a();
   }
+  if(a2==true){
+    game=false;
+    vic=false;
+  }
+  println(x);
+  println(y);
 }
 void main(){
   animate(mecachisenlamar);
