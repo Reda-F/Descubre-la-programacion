@@ -19,7 +19,7 @@ void menu1(){
   double x=mouseX;
 	double y=mouseY;
   if (x<210 && x>110 && y<155 && y>120){
-    image("https://scontent.xx.fbcdn.net/v/t1.15752-9/462538062_1084712346601341_7837472777128472267_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=ZjTkkKYC1sYQ7kNvgHka4vl&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&_nc_gid=AIXYiIuL8VxdxlQTiY5pSpw&oh=03_Q7cD1QF8VctwFsKZDyCit0dM0D_HbQXYU_ZfRXay8BRGfW8x_Q&oe=6741D90F",110,120,100,35);
+    image("https://e7.pngegg.com/pngimages/33/32/png-clipart-rectangular-play-button-icon-youtube-play-button-computer-icons-youtube-play-button-game-buttorn-angle-rectangle.png",110,120,100,35);
   }else{
     image("https://i.pinimg.com/originals/b4/2f/bb/b42fbb67b95e9f65e1cbcedeb628aa68.png",110,120,100,35);
   }
@@ -28,16 +28,16 @@ void menu2(){
   double x=mouseX;
 	double y=mouseY;
   if (x<210 && x>110 && y<195 && y>160){
-    image("https://scontent.xx.fbcdn.net/v/t1.15752-9/462556214_1963949324082713_4446264142783453459_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=j--6uPZDZpkQ7kNvgEae0MD&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&_nc_gid=AfeL-06b9Adr3L7DWiV9m68&oh=03_Q7cD1QFJWDdJpT-13PwXjecMEDXPjyZoFxjTm6wCYpr1Y_EIvA&oe=6741F7D6",110,160,100,35);
+    image("https://cordus.mx/wp-content/uploads/2018/10/boton-VEA-INSTRUCCIONES.png",110,160,100,35);
   }else{
-    image("https://scontent.xx.fbcdn.net/v/t1.15752-9/462556058_1057455659261462_7102521295166086444_n.png?_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=tAj0OIkou_EQ7kNvgFHx1qf&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&_nc_gid=AAbFzMpFV5RWovTDzhOr73r&oh=03_Q7cD1QFi51FRo5z_FSgcND49KensVgRkX0EiCjHfdOHxzcmaBg&oe=6741DC17",110,160,100,35);
+    image("https://mediaplan.com.gt/juegos/bigband/img/botoninstrucciones.png",110,160,100,35);
   }
 }
 void menu3(){
   double x=mouseX;
 	double y=mouseY;
   if (x<210 && x>110 && y<235 && y>200){
-    image("https://scontent.xx.fbcdn.net/v/t1.15752-9/462562007_1068432771541531_4121910247202967514_n.png?_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=ydFb7ykpwIYQ7kNvgENyI3D&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&_nc_gid=AqSAlMBWxEmebb9Lt7G78jO&oh=03_Q7cD1QEcn6tTW0WjflzzYX2TBRuTU0pYFwhi9eHjCE2r17vsUA&oe=6741EE95",110,200,100,35);
+    image("https://art.pixilart.com/0f9b61268540a80.png",110,200,100,50);
   }else{
     image("https://e1.pngegg.com/pngimages/624/1003/png-clipart-silver-button-credit-button-thumbnail.png",110,200,100,35);
   }
@@ -56,7 +56,9 @@ void menu_cr(){
   noFill();
 }
 
-void ins(){image("https://i.pinimg.com/736x/ad/27/83/ad2783c48066408ae58f73b66afccb0b.jpg",0,0,320,320);fill(0,0,0);textSize(20);text("Se juega con WASD",50,140);noFill();}
+void ins(){image("https://i.pinimg.com/736x/ad/27/83/ad2783c48066408ae58f73b66afccb0b.jpg",0,0,320,320);fill(0,0,0);
+           image("https://github.com/Reda-F/Descubre-la-programacion/blob/main/imagen_2024-12-01_142921860.png?raw=true",80,80,160,160);
+          }
 
 void mec(){
   menu_pr();
