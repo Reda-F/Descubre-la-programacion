@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://c77khs64qwlu4"]
+
+[ext_resource type="Script" path="res://Scripts/menu_principal.gd" id="1_u0ne7"]
+
+[node name="Menu_principal" type="Node2D"]
+script = ExtResource("1_u0ne7")
+
+[node name="Créditos" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.5
+offset_top = -15.5
+offset_right = 31.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Credits"
+
+[node name="Instrucciones" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.5
+offset_top = -15.5
+offset_right = 50.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Instructions
+"
+
+[node name="Jugar" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.5
+offset_top = -60.0
+offset_right = 20.5
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play"
+
+[connection signal="pressed" from="Créditos" to="." method="_on_créditos_pressed"]
+[connection signal="pressed" from="Instrucciones" to="." method="_on_instrucciones_pressed"]
+[connection signal="pressed" from="Jugar" to="." method="_on_button_pressed"]
